@@ -98,28 +98,29 @@ $connect->close();
 		<div class="card">
 			<div class="cardHeader" style="background-color:#245580;">
 				<h1><?php if ($totalRevenue) {
-						echo $totalRevenue;
+						echo "&#8358; ". number_format($totalRevenue,2);
 					} else {
 						echo '0';
 					} ?></h1>
 			</div>
 
 			<div class="cardContainer">
-				<p> <i class="glyphicon glyphicon-usd"></i> Total Revenue</p>
+				<p> &#8358; Total Revenue</p>
 			</div>
 		</div>
 
 	</div>
 	<div class="col-md-4">
-
-	</div>
-	<div class="panel panel-default">
-		<div class="panel-heading"> <i class="glyphicon glyphicon-user"></i> About the Project</div>
-		<div class="panel-body">
-			<h3>About the project</h3>
-			<p>This project was written by </p>
+		<div class="panel panel-default">
+			<div class="panel-heading"> <i class="glyphicon glyphicon-user"></i> About the Project</div>
+			<div class="panel-body">
+				<h3>About the project</h3>
+				<p>This project was written by </p>
+			</div>
 		</div>
 	</div>
+
+
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading"> <i class="glyphicon glyphicon-calendar"></i> Calendar</div>

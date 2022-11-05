@@ -2,7 +2,7 @@
 
 require_once 'core.php';
 
-$orderId = $_POST['orderId'];
+$orderId = $_GET['id'];
 
 $sql = "SELECT order_date, client_name, client_contact, sub_total, vat, total_amount, discount, grand_total, paid, due FROM orders WHERE order_id = $orderId";
 
