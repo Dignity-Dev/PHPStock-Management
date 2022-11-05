@@ -45,7 +45,7 @@ if($_POST) {
 				$errors[] = "Incorrect username/password combination";
 			} // /else
 		} else {		
-			$errors[] = "Username doesnot exists";		
+			$errors[] = "Username does not exists";		
 		} // /else
 	} // /else not empty username // password
 	
@@ -82,7 +82,7 @@ if($_POST) {
 			<div class="col-md-5 col-md-offset-4">
 				<div class="panel panel-info">
 					<div class="panel-heading">
-						<h3 class="panel-title">Login Inventory </h3>
+						<h3 class="panel-title">Administrator Login </h3>
 					</div>
 					<div class="panel-body">
 
