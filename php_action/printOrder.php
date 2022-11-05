@@ -1,4 +1,4 @@
-<?php 	
+<?php
 
 require_once 'core.php';
 
@@ -11,10 +11,10 @@ $orderData = $orderResult->fetch_array();
 
 $orderDate = $orderData[0];
 $clientName = $orderData[1];
-$clientContact = $orderData[2]; 
+$clientContact = $orderData[2];
 $subTotal = $orderData[3];
 $vat = $orderData[4];
-$totalAmount = $orderData[5]; 
+$totalAmount = $orderData[5];
 $discount = $orderData[6];
 $grandTotal = $orderData[7];
 $paid = $orderData[8];
@@ -26,95 +26,128 @@ product.product_name FROM order_item
 	INNER JOIN product ON order_item.product_id = product.product_id 
  WHERE order_item.order_id = $orderId";
 $orderItemResult = $connect->query($orderItemSql);
+?>
 
- $table = '
- <table border="1" cellspacing="0" cellpadding="20" width="100%">
-	<thead>
-		<tr >
-			<th colspan="5">
+<!DOCTYPE html>
+<html lang="en">
 
-			<center>
-				Order Date : '.$orderDate.'
-				<center>Client Name : '.$clientName.'</center>
-				Contact : '.$clientContact.'
-			</center>		
-			</th>
-				
-		</tr>		
-	</thead>
-</table>
-<table border="0" width="100%;" cellpadding="5" style="border:1px solid black;border-top-style:1px solid black;border-bottom-style:1px solid black;">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Order Reciept</title>
+	<style>
+		.print-area {
+			margin: 20px;
+		}
 
-	<tbody>
-		<tr>
-			<th>S.no</th>
-			<th>Product</th>
-			<th>Rate</th>
-			<th>Quantity</th>
-			<th>Total</th>
-		</tr>';
+		@media print {
+			.print-c {
+				display: none;
+			}
+		}
+	</style>
+</head>
 
-		$x = 1;
-		while($row = $orderItemResult->fetch_array()) {			
-						
-			$table .= '<tr>
-				<th>'.$x.'</th>
-				<th>'.$row[4].'</th>
-				<th>'.$row[1].'</th>
-				<th>'.$row[2].'</th>
-				<th>'.$row[3].'</th>
-			</tr>
-			';
-		$x++;
-		} // /while
+<body>
 
-		$table .= '<tr>
-			<th></th>
-		</tr>
+	<div class="print-c">
+		<button onclick="window.print();">Print Now</button>
+		<button onclick="window.history.back();">Back to report</button>
+	</div>
+	<div class="print-area">
+		<table border="1" cellspacing="0" cellpadding="20" width="100%">
+			<thead>
+				<tr>
+					<th colspan="5">
 
-		<tr>
-			<th></th>
-		</tr>
+						<center>
+							Order Date : <?php echo $orderDate; ?>
+							<center>Customer Name : <?php echo $clientName; ?></center>
+							Contact : <?php echo $clientContact; ?>
+						</center>
+					</th>
 
-		<tr>
-			<th>Sub Amount</th>
-			<th>'.$subTotal.'</th>			
-		</tr>
+				</tr>
+			</thead>
+		</table>
+		<table border="0" width="100%;" cellpadding="5" style="border:1px solid black;border-top-style:1px solid black;border-bottom-style:1px solid black;">
 
-		<tr>
-			<th>VAT (13%)</th>
-			<th>'.$vat.'</th>			
-		</tr>
+			<tbody>
+				<tr>
+					<th>S.no</th>
+					<th>Product</th>
+					<th>Rate</th>
+					<th>Quantity</th>
+					<th>Total</th>
+				</tr>
+				<?php
+				$x = 1;
+				while ($row = $orderItemResult->fetch_array()) {
+				?>
+					<tr>
+						<th><?php echo $x; ?></th>
+						<th><?php echo $row[4]; ?></th>
+						<th><?php echo $row[1]; ?></th>
+						<th><?php echo $row[2]; ?></th>
+						<th><?php echo $row[3]; ?></th>
+					</tr>
+				<?php
+					$x++;
+				} // /while
 
-		<tr>
-			<th>Total Amount</th>
-			<th>'.$totalAmount.'</th>			
-		</tr>	
+				?>
+				<tr>
+					<th></th>
+				</tr>
 
-		<tr>
-			<th>Discount</th>
-			<th>'.$discount.'</th>			
-		</tr>
+				<tr>
+					<th></th>
+				</tr>
 
-		<tr>
-			<th>Grand Total</th>
-			<th>'.$grandTotal.'</th>			
-		</tr>
+				<tr>
+					<th>Sub Amount</th>
+					<th><?php echo $subTotal; ?></th>
+				</tr>
 
-		<tr>
-			<th>Paid Amount</th>
-			<th>'.$paid.'</th>			
-		</tr>
+				<tr>
+					<th>VAT (13%)</th>
+					<th><?php echo $vat; ?></th>
+				</tr>
 
-		<tr>
-			<th>Due Amount</th>
-			<th>'.$due.'</th>			
-		</tr>
-	</tbody>
-</table>
- ';
+				<tr>
+					<th>Total Amount</th>
+					<th><?php echo $totalAmount; ?></th>
+				</tr>
 
+				<tr>
+					<th>Discount</th>
+					<th><?php echo $discount; ?></th>
+				</tr>
+
+				<tr>
+					<th>Grand Total</th>
+					<th><?php echo $grandTotal; ?></th>
+				</tr>
+
+				<tr>
+					<th>Paid Amount</th>
+					<th><?php echo $paid; ?></th>
+				</tr>
+
+				<tr>
+					<th>Due Amount</th>
+					<th><?php echo $due; ?></th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+
+</html>
+<?php
 
 $connect->close();
 
-echo $table;
+?>
