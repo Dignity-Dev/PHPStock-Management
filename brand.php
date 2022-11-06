@@ -18,13 +18,13 @@
 				<div class="remove-messages"></div>
 
 				<div class="div-action pull pull-right" style="padding-bottom:20px;">
-					<button class="btn btn-default button1" data-toggle="modal" data-target="#addBrandModel"> <i class="glyphicon glyphicon-plus-sign"></i> Add Brand </button>
+					<button class="btn btn-default button1" data-toggle="modal" data-target="#addBrandModel"> <i class="glyphicon glyphicon-plus-sign"></i> Add Supplier </button>
 				</div> <!-- /div-action -->				
 				
 				<table class="table" id="manageBrandTable">
 					<thead>
 						<tr>							
-							<th>Brand Name</th>
+							<th>Supplier Name</th>
 							<th>Status</th>
 							<th style="width:15%;">Options</th>
 						</tr>
@@ -44,17 +44,17 @@
     	<form class="form-horizontal" id="submitBrandForm" action="php_action/createBrand.php" method="POST">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title"><i class="fa fa-plus"></i> Add Brand</h4>
+	        <h4 class="modal-title"><i class="fa fa-plus"></i> Add Supplier</h4>
 	      </div>
 	      <div class="modal-body">
 
 	      	<div id="add-brand-messages"></div>
 
 	        <div class="form-group">
-	        	<label for="brandName" class="col-sm-3 control-label">Brand Name: </label>
+	        	<label for="brandName" class="col-sm-3 control-label">Supplier Name: </label>
 	        	<label class="col-sm-1 control-label">: </label>
 				    <div class="col-sm-8">
-				      <input type="text" class="form-control" id="brandName" placeholder="Brand Name" name="brandName" autocomplete="off">
+				      <input type="text" class="form-control" id="brandName" placeholder="Supplier Name" name="brandName" autocomplete="off">
 				    </div>
 	        </div> <!-- /form-group-->	         	        
 	        <div class="form-group">
@@ -107,10 +107,10 @@
 
 		      <div class="edit-brand-result">
 		      	<div class="form-group">
-		        	<label for="editBrandName" class="col-sm-3 control-label">Brand Name: </label>
+		        	<label for="editBrandName" class="col-sm-3 control-label">Supplier Name: </label>
 		        	<label class="col-sm-1 control-label">: </label>
 					    <div class="col-sm-8">
-					      <input type="text" class="form-control" id="editBrandName" placeholder="Brand Name" name="editBrandName" autocomplete="off">
+					      <input type="text" class="form-control" id="editBrandName" placeholder="Supplier Name" name="editBrandName" autocomplete="off">
 					    </div>
 		        </div> <!-- /form-group-->	         	        
 		        <div class="form-group">

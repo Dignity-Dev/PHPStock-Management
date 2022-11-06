@@ -25,7 +25,7 @@ $(document).ready(function() {
 			var categoriesStatus = $("#categoriesStatus").val();
 
 			if(categoriesName == "") {
-				$("#categoriesName").after('<p class="text-danger">Brand Name field is required</p>');
+				$("#categoriesName").after('<p class="text-danger">Supplier Name field is required</p>');
 				$('#categoriesName').closest('.form-group').addClass('has-error');
 			} else {
 				// remov error text field
@@ -35,7 +35,7 @@ $(document).ready(function() {
 			}
 
 			if(categoriesStatus == "") {
-				$("#categoriesStatus").after('<p class="text-danger">Brand Name field is required</p>');
+				$("#categoriesStatus").after('<p class="text-danger">Supplier Name field is required</p>');
 				$('#categoriesStatus').closest('.form-group').addClass('has-error');
 			} else {
 				// remov error text field
@@ -140,7 +140,7 @@ function editCategories(categoriesId = null) {
 					var categoriesStatus = $("#editCategoriesStatus").val();
 
 					if(categoriesName == "") {
-						$("#editCategoriesName").after('<p class="text-danger">Brand Name field is required</p>');
+						$("#editCategoriesName").after('<p class="text-danger">Supplier Name field is required</p>');
 						$('#editCategoriesName').closest('.form-group').addClass('has-error');
 					} else {
 						// remov error text field
@@ -150,7 +150,7 @@ function editCategories(categoriesId = null) {
 					}
 
 					if(categoriesStatus == "") {
-						$("#editCategoriesStatus").after('<p class="text-danger">Brand Name field is required</p>');
+						$("#editCategoriesStatus").after('<p class="text-danger">Supplier Name field is required</p>');
 						$('#editCategoriesStatus').closest('.form-group').addClass('has-error');
 					} else {
 						// remov error text field

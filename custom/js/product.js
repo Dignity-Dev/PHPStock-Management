@@ -89,7 +89,7 @@ $(document).ready(function() {
 			}	// /else
 
 			if(brandName == "") {
-				$("#brandName").after('<p class="text-danger">Brand Name field is required</p>');
+				$("#brandName").after('<p class="text-danger">Supplier Name field is required</p>');
 				$('#brandName').closest('.form-group').addClass('has-error');
 			}	else {
 				// remov error text field
@@ -237,7 +237,7 @@ function editProduct(productId = null) {
 				$("#editQuantity").val(response.quantity);
 				// rate
 				$("#editRate").val(response.rate);
-				// brand name
+				// Supplier Name
 				$("#editBrandName").val(response.brand_id);
 				// category name
 				$("#editCategoryName").val(response.categories_id);
@@ -288,7 +288,7 @@ function editProduct(productId = null) {
 					}	// /else
 
 					if(brandName == "") {
-						$("#editBrandName").after('<p class="text-danger">Brand Name field is required</p>');
+						$("#editBrandName").after('<p class="text-danger">Supplier Name field is required</p>');
 						$('#editBrandName').closest('.form-group').addClass('has-error');
 					}	else {
 						// remov error text field

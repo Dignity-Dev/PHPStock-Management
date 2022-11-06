@@ -96,7 +96,7 @@
 	        </div> <!-- /form-group-->	     	        
 
 	        <div class="form-group">
-	        	<label for="brandName" class="col-sm-3 control-label">Brand Name: </label>
+	        	<label for="brandName" class="col-sm-3 control-label">Supplier Name: </label>
 	        	<label class="col-sm-1 control-label">: </label>
 				    <div class="col-sm-8">
 				      <select class="form-control" id="brandName" name="brandName">
@@ -254,7 +254,7 @@
 			        </div> <!-- /form-group-->	     	        
 
 			        <div class="form-group">
-			        	<label for="editBrandName" class="col-sm-3 control-label">Brand Name: </label>
+			        	<label for="editBrandName" class="col-sm-3 control-label">Supplier Name: </label>
 			        	<label class="col-sm-1 control-label">: </label>
 						    <div class="col-sm-8">
 						      <select class="form-control" id="editBrandName" name="editBrandName">
