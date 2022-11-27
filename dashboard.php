@@ -115,7 +115,8 @@ $connect->close();
 			<div class="panel-heading"> <i class="glyphicon glyphicon-user"></i> About the Project</div>
 			<div class="panel-body">
 				<h3>About the project</h3>
-				<p>This project was written by </p>
+				<p>This project was written by: </p>
+				<p>OLAJIIRE SARAH KEHINDE <br>OLAJIIRE CHARLOTTE TAIWO<br> ADIGUN ZAINAB AYINKE<br>OYEKUNLE TAIWO CHRISTIANA<br>SALAM ZAINAB ODUNOLA</p>
 			</div>
 		</div>
 	</div>
