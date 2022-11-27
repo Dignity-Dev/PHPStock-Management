@@ -17,7 +17,7 @@
 
                 <div class="remove-messages"></div>
 
-                <table class="table" id="manageProductTable">
+                <table class="table" id="manageStockTable">
                     <thead>
                         <tr>
                             <th style="width:10%;">Photo</th>
@@ -29,7 +29,6 @@
                             <th>Re-order Level</th>
                             <th>Minimum Order</th>
                             <th>Status</th>
-                            <th style="width:15%;">Options</th>
                         </tr>
                     </thead>
                 </table>
@@ -41,6 +40,6 @@
 </div> <!-- /row -->
 
 
-<script src="custom/js/product.js"></script>
+<script src="custom/js/stock.js"></script>
 
 <?php require_once 'includes/footer.php'; ?>
