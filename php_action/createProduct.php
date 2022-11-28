@@ -10,6 +10,8 @@ if($_POST) {
   // $productImage 	= $_POST['productImage'];
   $quantity 			= $_POST['quantity'];
   $rate 					= $_POST['rate'];
+  $minimum 					= $_POST['minimum'];
+	$reorder 					= $_POST['reorder'];
   $brandName 			= $_POST['brandName'];
   $categoryName 	= $_POST['categoryName'];
   $productStatus 	= $_POST['productStatus'];
@@ -21,8 +23,8 @@ if($_POST) {
 		if(is_uploaded_file($_FILES['productImage']['tmp_name'])) {			
 			if(move_uploaded_file($_FILES['productImage']['tmp_name'], $url)) {
 				
-				$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, rate, active, status) 
-				VALUES ('$productName', '$url', '$brandName', '$categoryName', '$quantity', '$rate', '$productStatus', 1)";
+				$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, rate, active, status, minimum_level, re_order_level) 
+				VALUES ('$productName', '$url', '$brandName', '$categoryName', '$quantity', '$rate', '$productStatus', 1, '$minimum', '$reorder')";
 
 				if($connect->query($sql) === TRUE) {
 					$valid['success'] = true;

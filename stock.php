@@ -27,7 +27,6 @@
                             <th>Brand</th>
                             <th>Category</th>
                             <th>Re-order Level</th>
-                            <th>Minimum Order</th>
                             <th>Status</th>
                         </tr>
                     </thead>
